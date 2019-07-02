@@ -8,11 +8,16 @@ class SliverBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      backgroundColor: Color(0xFF303030),
       expandedHeight: 200.0,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Container(
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(5.0),
+              bottomRight: Radius.circular(5.0),
+            ),
             gradient: LinearGradient(
               tileMode: TileMode.mirror,
               // begin: Alignment.topLeft,
@@ -37,7 +42,6 @@ class SliverBar extends StatelessWidget {
             //   ],
             // ),
           ),
-          // color: Colors.grey[900],
         ),
         title: Text(
           titleText,

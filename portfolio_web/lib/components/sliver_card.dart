@@ -27,7 +27,9 @@ class SliverCard extends StatelessWidget {
             Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(10.0),
+                  // padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.only(
+                      top: 25.0, right: 50.0, bottom: 10.0, left: 50.0),
                   child: Image.asset(
                     imagePath,
                   ),

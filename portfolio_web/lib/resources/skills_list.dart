@@ -1,11 +1,7 @@
 List skills = [
   {'id': 0, 'title': 'HTML', 'logo': 'skills_icons/html80.png'},
   {'id': 1, 'title': 'CSS', 'logo': 'skills_icons/css80.png'},
-  {
-    'id': 2,
-    'title': 'JavaScript',
-    'logo': 'assets/skills_icons/javascript80.png'
-  },
+  {'id': 2, 'title': 'JavaScript', 'logo': 'skills_icons/javascript80.png'},
   {'id': 3, 'title': 'React', 'logo': 'skills_icons/react80.png'},
   {'id': 4, 'title': 'jQuery', 'logo': 'skills_icons/jquery80.png'},
   {'id': 5, 'title': 'Pug', 'logo': 'skills_icons/pugtrans80.png'},

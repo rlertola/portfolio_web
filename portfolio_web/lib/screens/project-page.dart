@@ -2,7 +2,6 @@ import 'package:flutter_web/material.dart';
 import 'package:portfolio_web/components/big_button.dart';
 import 'package:portfolio_web/resources/projects_list.dart';
 import 'dart:html' as html;
-// import 'package:url_launcher/url_launcher.dart';
 
 class Project extends StatelessWidget {
   Project({this.index});
@@ -11,11 +10,6 @@ class Project extends StatelessWidget {
   // Launches
   void launchURL(url) async {
     await html.window.open(url, 'GitHub Repo');
-    // if (await canLaunch(url)) {
-    //   await launch(url);
-    // } else {
-    //   throw 'Could not launch $url';
-    // }
   }
 
   @override
@@ -41,7 +35,7 @@ class Project extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.75,
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: ListView(
@@ -71,10 +65,6 @@ class Project extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 20.0,
-                  width: 150.0,
-                  child: Divider(
-                    color: Colors.white,
-                  ),
                 ),
                 Column(
                   children: paddingWidgets,

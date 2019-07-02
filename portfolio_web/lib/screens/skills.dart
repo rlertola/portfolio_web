@@ -8,7 +8,7 @@ class Skills extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.75,
           child: SafeArea(
             child: CustomScrollView(
               slivers: <Widget>[

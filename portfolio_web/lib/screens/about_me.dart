@@ -9,14 +9,8 @@ import 'cert-viewer.dart';
 import 'skills.dart';
 
 class AboutMe extends StatelessWidget {
-  // url_launcher function for github link.
   void launchGitHub() async {
     await html.window.open(kGitHubUrl, 'GitHub Repos');
-    // if (await canLaunch(kGitHubUrl)) {
-    //   await launch(kGitHubUrl);
-    // } else {
-    //   throw 'Could not launch $kGitHubUrl';
-    // }
   }
 
   @override
@@ -24,7 +18,7 @@ class AboutMe extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.75,
           child: CustomScrollView(
             slivers: <Widget>[
               SliverBar(
@@ -34,7 +28,7 @@ class AboutMe extends StatelessWidget {
                 delegate: SliverChildListDelegate(
                   [
                     PaddingText(
-                      padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(10.0),
                       text: kAboutMeDescription,
                       size: 20.0,
                       family: 'Raleway',

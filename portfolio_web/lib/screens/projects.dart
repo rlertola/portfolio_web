@@ -8,30 +8,35 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverBar(
-            titleText: 'Projects',
-          ),
-          Container(
-            // width: MediaQuery.of(context).size.width * 0.5,
-            child: SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  return SliverCard(
-                    routeTo: Project(
-                      index: index,
-                    ),
-                    imagePath: projects[index]['main_image'],
-                    titleText: projects[index]['project_name'],
-                    context: context,
-                  );
-                },
-                childCount: projects.length,
+      body: Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.75,
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverBar(
+                titleText: 'Projects',
               ),
-            ),
-          )
-        ],
+              Container(
+                // width: MediaQuery.of(context).size.width * 0.5,
+                child: SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, index) {
+                      return SliverCard(
+                        routeTo: Project(
+                          index: index,
+                        ),
+                        imagePath: projects[index]['main_image'],
+                        titleText: projects[index]['project_name'],
+                        context: context,
+                      );
+                    },
+                    childCount: projects.length,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
